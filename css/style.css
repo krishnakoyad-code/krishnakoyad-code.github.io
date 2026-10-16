@@ -1,0 +1,1592 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcome-page {
+    min-height: 100vh;
+    background: #ffffff;
+    color: #07172e;
+}
+
+
+/* =========================================
+   TOP NAVIGATION
+========================================= */
+
+.top-header {
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid #e7eef7;
+
+    position: relative;
+    z-index: 20;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    color: #07172e;
+}
+
+.logo-icon {
+    color: #1479f8;
+
+    font-size: 20px;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-link {
+    padding: 10px 17px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #52637a;
+
+    transition: 0.25s ease;
+}
+
+.nav-link:hover {
+    color: #1479f8;
+
+    background: #eef6ff;
+}
+
+.nav-link.active {
+    color: #ffffff;
+
+    background: #1479f8;
+
+    box-shadow: 0 7px 20px rgba(20, 121, 248, 0.22);
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+    position: relative;
+
+    width: 100%;
+    min-height: calc(100vh - 72px);
+
+    padding: 55px 5% 45px;
+
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+
+    align-items: center;
+    gap: 55px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 35% 35%,
+            rgba(45, 148, 255, 0.08),
+            transparent 32%
+        ),
+        #ffffff;
+}
+
+
+/* BACKGROUND GRID */
+
+.hero-section::before {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 58%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(
+            rgba(34, 125, 220, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(34, 125, 220, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 38px 38px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* BADGE */
+
+.hero-badge {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 8px 14px;
+
+    margin-bottom: 18px;
+
+    border-radius: 30px;
+
+    border: 1px solid #cfe2fa;
+
+    background: #f6faff;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #52637a;
+}
+
+.hero-badge > span {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #1479f8;
+
+    box-shadow: 0 0 0 4px rgba(20, 121, 248, 0.09);
+}
+
+.hero-badge b {
+    color: #a7b5c6;
+}
+
+
+/* INTRO */
+
+.hero-hello {
+    margin-bottom: 3px;
+
+    font-size: 21px;
+
+    color: #52637a;
+}
+
+.hero-content h1 {
+    font-size: clamp(48px, 5vw, 76px);
+
+    line-height: 0.98;
+
+    letter-spacing: -3px;
+
+    color: #07172e;
+}
+
+.hero-content h2 {
+    display: flex;
+    align-items: center;
+
+    margin-top: 10px;
+
+    font-size: clamp(38px, 4vw, 62px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    color: #1479f8;
+}
+
+
+/* CURSOR */
+
+.typing-line {
+    display: inline-block;
+
+    width: 3px;
+    height: 48px;
+
+    margin-left: 8px;
+
+    background: #1479f8;
+
+    animation: cursorBlink 0.8s infinite;
+}
+
+@keyframes cursorBlink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* DESCRIPTION */
+
+.hero-description {
+    max-width: 520px;
+
+    margin-top: 19px;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    color: #52637a;
+}
+
+
+/* =========================================
+   TOOLS
+========================================= */
+
+.hero-tools {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.hero-tool {
+    min-width: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 15px;
+
+    border-radius: 11px;
+
+    border: 1px solid #dce8f5;
+
+    background: #ffffff;
+
+    box-shadow: 0 5px 18px rgba(20, 65, 110, 0.05);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #263c57;
+
+    transition: 0.25s ease;
+}
+
+.hero-tool span {
+    font-size: 18px;
+}
+
+.hero-tool:hover {
+    transform: translateY(-3px);
+
+    border-color: #8dc5ff;
+
+    box-shadow: 0 9px 25px rgba(20, 121, 248, 0.11);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 25px;
+}
+
+.primary-btn,
+.secondary-btn {
+    min-width: 175px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 14px 22px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #086df1,
+            #2ba8ff
+        );
+
+    box-shadow:
+        0 9px 25px rgba(14, 119, 241, 0.22);
+}
+
+.secondary-btn {
+    color: #1479f8;
+
+    background: #ffffff;
+
+    border: 1px solid #1479f8;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   HERO STATS
+========================================= */
+
+.hero-stats {
+    max-width: 560px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-top: 36px;
+}
+
+.hero-stats > div {
+    text-align: center;
+
+    padding: 5px 12px;
+}
+
+.hero-stats > div:not(:last-child) {
+    border-right: 1px solid #dce6f1;
+}
+
+.hero-stats strong {
+    display: block;
+
+    font-size: 23px;
+
+    color: #1479f8;
+}
+
+.hero-stats span {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 10px;
+
+    color: #71839a;
+}
+
+
+/* =========================================
+   RIGHT DASHBOARD
+========================================= */
+
+.hero-dashboard {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: 1.55fr 1fr;
+
+    grid-template-rows: 235px 245px;
+
+    gap: 14px;
+}
+
+
+/* DASHBOARD CARD */
+
+.dashboard-card {
+    position: relative;
+
+    border-radius: 17px;
+
+    border: 1px solid #e3ebf4;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    box-shadow:
+        0 14px 40px rgba(35, 80, 125, 0.09);
+
+    overflow: hidden;
+}
+
+.dashboard-card h3 {
+    font-size: 14px;
+
+    color: #0a1c32;
+}
+
+
+/* =========================================
+   SALES CARD
+========================================= */
+
+.sales-card {
+    padding: 20px;
+}
+
+.dashboard-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-card-header span {
+    padding: 7px 10px;
+
+    border: 1px solid #dfe8f3;
+
+    border-radius: 9px;
+
+    font-size: 9px;
+
+    color: #65768b;
+}
+
+
+/* SALES CHART */
+
+.sales-chart {
+    height: 165px;
+
+    margin-top: 17px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    gap: 10px;
+
+    padding: 15px 10px 0;
+
+    border-left: 1px solid #dce6f0;
+    border-bottom: 1px solid #dce6f0;
+
+    background-image:
+        linear-gradient(
+            #edf3f8 1px,
+            transparent 1px
+        );
+
+    background-size: 100% 40px;
+}
+
+.sales-bar {
+    height: 100%;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sales-bar span {
+    width: 72%;
+
+    min-height: 20px;
+
+    border-radius: 5px 5px 0 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #31b6ff,
+            #1479f8
+        );
+
+    box-shadow:
+        0 5px 12px rgba(20, 121, 248, 0.15);
+}
+
+.sales-bar small {
+    margin-top: 7px;
+
+    font-size: 8px;
+
+    color: #77899e;
+}
+
+
+/* =========================================
+   CATEGORY CARD
+========================================= */
+
+.category-card {
+    padding: 20px;
+}
+
+.category-content {
+    height: calc(100% - 35px);
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.donut-chart {
+    flex-shrink: 0;
+
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #1479f8 0 35%,
+            #7357e8 35% 60%,
+            #f6a21a 60% 78%,
+            #17b978 78% 100%
+        );
+
+    position: relative;
+}
+
+.donut-chart::after {
+    content: "";
+
+    position: absolute;
+
+    width: 58px;
+    height: 58px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #ffffff;
+}
+
+.chart-legend {
+    width: 100%;
+}
+
+.chart-legend p {
+    display: grid;
+
+    grid-template-columns: 9px 1fr auto;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin: 9px 0;
+
+    font-size: 8px;
+
+    color: #63758b;
+}
+
+.chart-legend p > span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+}
+
+.chart-legend b {
+    color: #263c57;
+}
+
+.blue-dot {
+    background: #1479f8;
+}
+
+.purple-dot {
+    background: #7357e8;
+}
+
+.orange-dot {
+    background: #f6a21a;
+}
+
+.green-dot {
+    background: #17b978;
+}
+
+
+/* =========================================
+   SQL CARD
+========================================= */
+
+.sql-card {
+    background:
+        linear-gradient(
+            145deg,
+            #102237,
+            #071421
+        );
+
+    border-color: #172d45;
+}
+
+.sql-header {
+    height: 48px;
+
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #1d344d;
+
+    color: #dcecff;
+}
+
+.sql-header > div {
+    display: flex;
+    gap: 5px;
+}
+
+.sql-header i {
+    width: 8px;
+    height: 8px;
+
+    display: block;
+
+    border-radius: 50%;
+}
+
+.sql-header i:nth-child(1) {
+    background: #ff5c57;
+}
+
+.sql-header i:nth-child(2) {
+    background: #febc2e;
+}
+
+.sql-header i:nth-child(3) {
+    background: #28c840;
+}
+
+.sql-header > span {
+    font-size: 10px;
+}
+
+.sql-header button {
+    padding: 6px 10px;
+
+    border: 1px solid #49637e;
+
+    border-radius: 15px;
+
+    background: transparent;
+
+    color: #dcecff;
+
+    font-size: 8px;
+}
+
+.sql-code {
+    padding: 17px 20px;
+
+    font-family: Consolas, monospace;
+
+    font-size: 10px;
+    line-height: 1.65;
+
+    color: #d9e5ef;
+}
+
+.sql-keyword {
+    color: #36c7ff;
+}
+
+.sql-function {
+    color: #ffc83d;
+}
+
+
+/* =========================================
+   INSIGHTS
+========================================= */
+
+.insights-card {
+    padding: 20px;
+}
+
+.insight-item {
+    margin-top: 20px;
+}
+
+.insight-item strong {
+    display: block;
+
+    font-size: 17px;
+
+    color: #1479f8;
+}
+
+.insight-item strong.positive {
+    color: #17b978;
+}
+
+.insight-item strong.purple {
+    color: #7357e8;
+}
+
+.insight-item span {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 9px;
+
+    color: #74869b;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-dashboard {
+        width: 100%;
+        max-width: 800px;
+
+        margin: 20px auto 0;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .top-header {
+        padding: 0 20px;
+    }
+
+    .navbar {
+        gap: 3px;
+    }
+
+    .nav-link {
+        padding: 9px 10px;
+
+        font-size: 10px;
+    }
+
+    .hero-section {
+        padding: 40px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content h2 {
+        font-size: 37px;
+    }
+
+    .hero-dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .dashboard-card {
+        min-height: 230px;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .hero-stats > div {
+        border-right: none !important;
+    }
+}
+/* =========================================
+   DEMO MATCH - HERO POLISH
+========================================= */
+
+.hero-section {
+    min-height: calc(100vh - 72px);
+
+    padding:
+        35px 4.5%
+        35px 4.5%;
+
+    grid-template-columns:
+        0.90fr 1.10fr;
+
+    gap: 65px;
+}
+
+
+/* LEFT SIDE */
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    font-size: clamp(54px, 5.2vw, 82px);
+}
+
+.hero-content h2 {
+    font-size: clamp(42px, 4.2vw, 66px);
+}
+
+.hero-description {
+    max-width: 570px;
+
+    font-size: 17px;
+}
+
+
+/* TOOL BUTTONS */
+
+.hero-tool {
+    min-width: 115px;
+
+    padding: 12px 17px;
+}
+
+
+/* MAIN BUTTONS */
+
+.primary-btn,
+.secondary-btn {
+    min-width: 195px;
+
+    padding: 15px 23px;
+}
+
+
+/* RIGHT DASHBOARD */
+
+.hero-dashboard {
+    width: 100%;
+
+    grid-template-columns:
+        1.55fr 1fr;
+
+    grid-template-rows:
+        250px 260px;
+
+    gap: 16px;
+}
+
+
+/* DASHBOARD CARDS */
+
+.dashboard-card {
+    border-radius: 18px;
+
+    box-shadow:
+        0 16px 45px
+        rgba(35, 80, 125, 0.10);
+}
+/* =========================================
+   WHAT I DO SECTION
+========================================= */
+
+.what-i-do-section {
+    width: 100%;
+
+    padding: 42px 4.5% 50px;
+
+    display: grid;
+    grid-template-columns: 0.85fr 2.15fr;
+
+    gap: 55px;
+    align-items: center;
+
+    background: #ffffff;
+
+    border-top: 1px solid #edf2f7;
+}
+
+
+/* =========================================
+   LEFT INTRO
+========================================= */
+
+.what-label {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #71839a;
+}
+
+.what-label span {
+    width: 38px;
+    height: 3px;
+
+    border-radius: 10px;
+
+    background: #1479f8;
+}
+
+
+.what-intro h2 {
+    margin-top: 12px;
+
+    font-size: 38px;
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+
+    color: #07172e;
+}
+
+.what-intro h2 span {
+    display: block;
+
+    color: #1479f8;
+}
+
+
+.what-intro > p {
+    max-width: 390px;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: #65778e;
+}
+
+
+/* =========================================
+   CARDS AREA
+========================================= */
+
+.what-cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+
+/* CARD */
+
+.what-card {
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 22px 20px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e1eaf3;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+
+/* SOFT DECORATIVE GLOW */
+
+.what-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    right: -45px;
+    bottom: -60px;
+
+    border-radius: 50%;
+
+    opacity: 0.18;
+}
+
+
+/* ICON */
+
+.what-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+
+/* CARD TEXT */
+
+.what-card h3 {
+    margin-top: 20px;
+
+    font-size: 15px;
+
+    color: #0b1d33;
+}
+
+.what-card p {
+    margin-top: 9px;
+
+    font-size: 11px;
+    line-height: 1.6;
+
+    color: #64768b;
+}
+
+
+/* =========================================
+   INDIVIDUAL CARD COLORS
+========================================= */
+
+/* DATA ANALYSIS */
+
+.analysis-card {
+    background:
+        linear-gradient(
+            145deg,
+            #f5faff,
+            #eaf5ff
+        );
+}
+
+.analysis-card .what-icon {
+    color: #1479f8;
+
+    background: #dceeff;
+}
+
+.analysis-card::after {
+    background: #1479f8;
+}
+
+
+/* DATA VISUALIZATION */
+
+.visualization-card {
+    background:
+        linear-gradient(
+            145deg,
+            #f3fffb,
+            #e8fbf4
+        );
+}
+
+.visualization-card .what-icon {
+    color: #11a66c;
+
+    background: #d5f7e9;
+}
+
+.visualization-card::after {
+    background: #17b978;
+}
+
+
+/* REPORTING */
+
+.reporting-card {
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf0,
+            #fff4dc
+        );
+}
+
+.reporting-card .what-icon {
+    color: #d99100;
+
+    background: #ffedc2;
+}
+
+.reporting-card::after {
+    background: #f5a623;
+}
+
+
+/* PROBLEM SOLVING */
+
+.problem-card {
+    background:
+        linear-gradient(
+            145deg,
+            #faf7ff,
+            #f1ebff
+        );
+}
+
+.problem-card .what-icon {
+    color: #7655df;
+
+    background: #e7ddff;
+}
+
+.problem-card::after {
+    background: #7655df;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.what-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(35, 75, 115, 0.10);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .what-i-do-section {
+        grid-template-columns: 1fr;
+    }
+
+    .what-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .what-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .what-intro h2 {
+        font-size: 32px;
+    }
+}
+/* =========================================
+   PREMIUM HEADER POLISH
+========================================= */
+
+.top-header {
+    height: 64px;
+    padding: 0 4.5%;
+
+    box-shadow:
+        0 3px 18px rgba(35, 75, 115, 0.05);
+}
+
+.logo {
+    font-size: 17px;
+}
+
+.logo-icon {
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    gap: 8px;
+}
+
+.nav-link {
+    padding: 9px 16px;
+    font-size: 12px;
+}
+
+.nav-link.active {
+    box-shadow:
+        0 6px 18px rgba(20, 121, 248, 0.18);
+}
+/* =========================================
+   CLEAN TOOL ICONS
+========================================= */
+
+.tool-icon {
+    width: 27px;
+    height: 27px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    font-size: 9px !important;
+    font-weight: 800;
+}
+
+.python-icon {
+    color: #1267b1;
+    background: #e4f2ff;
+}
+
+.sql-icon {
+    color: #0877bd;
+    background: #e1f4ff;
+}
+
+.powerbi-icon {
+    color: #9b7200;
+    background: #fff0b8;
+}
+
+.excel-icon {
+    color: #08783f;
+    background: #dff5e8;
+}
+/* REAL TOOL ICONS */
+
+.hero-tool i {
+    font-size: 24px;
+}
+
+.python-logo {
+    color: #3776ab;
+}
+
+.sql-logo {
+    color: #1479f8;
+}
+
+.powerbi-logo {
+    color: #f2c811;
+}
+
+.excel-logo {
+    color: #107c41;
+}
+/* =========================================
+   DASHBOARD PREMIUM POLISH
+========================================= */
+
+/* ALL DASHBOARD CARDS */
+
+.dashboard-card {
+    border: 1px solid #dce7f2;
+
+    box-shadow:
+        0 10px 30px rgba(31, 73, 125, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #c4dcf5;
+
+    box-shadow:
+        0 18px 42px rgba(31, 73, 125, 0.12);
+}
+
+
+/* =========================================
+   SALES CHART
+========================================= */
+
+.sales-card {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #fbfdff 100%
+        );
+}
+
+.sales-chart {
+    border-left-color: #d7e4f1;
+    border-bottom-color: #d7e4f1;
+
+    background-image:
+        linear-gradient(
+            rgba(37, 116, 190, 0.08) 1px,
+            transparent 1px
+        );
+}
+
+.sales-bar span {
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #3bb9ff 0%,
+            #1c8cf4 55%,
+            #1479f8 100%
+        );
+
+    box-shadow:
+        0 7px 14px rgba(20, 121, 248, 0.14);
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+.sales-bar span::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    border-radius: 5px;
+
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.sales-bar:hover span {
+    transform: translateY(-4px);
+
+    filter: brightness(1.05);
+}
+
+
+/* =========================================
+   CATEGORY DONUT
+========================================= */
+
+.donut-chart {
+    box-shadow:
+        0 10px 25px rgba(35, 80, 125, 0.10);
+
+    transition: transform 0.35s ease;
+}
+
+.category-card:hover .donut-chart {
+    transform: rotate(8deg) scale(1.04);
+}
+
+.donut-chart::after {
+    box-shadow:
+        inset 0 0 0 1px #edf2f7;
+}
+
+
+/* =========================================
+   SQL PANEL
+========================================= */
+
+.sql-card {
+    background:
+        linear-gradient(
+            145deg,
+            #10253a 0%,
+            #091b2d 55%,
+            #061522 100%
+        );
+
+    box-shadow:
+        0 16px 38px rgba(6, 25, 43, 0.16);
+}
+
+.sql-card:hover {
+    border-color: #254866;
+
+    box-shadow:
+        0 20px 45px rgba(6, 25, 43, 0.22);
+}
+
+.sql-header {
+    background: rgba(5, 18, 30, 0.18);
+}
+
+.sql-header button {
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.sql-header button:hover {
+    color: #ffffff;
+
+    border-color: #47bfff;
+
+    background: rgba(42, 160, 225, 0.12);
+}
+
+.sql-code {
+    color: #dce9f4;
+}
+
+
+/* =========================================
+   INSIGHTS CARD
+========================================= */
+
+.insights-card {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fbfdff
+        );
+}
+
+.insight-item {
+    position: relative;
+
+    padding-left: 13px;
+}
+
+.insight-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 2px;
+
+    width: 3px;
+    height: 32px;
+
+    border-radius: 5px;
+
+    background: #1479f8;
+}
+
+.insight-item:first-of-type::before {
+    background: #17b978;
+}
+
+.insight-item:last-child::before {
+    background: #7357e8;
+}
+
+.insight-item strong {
+    font-size: 18px;
+}
+
+.insight-item span {
+    margin-top: 3px;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================
+   DASHBOARD HEADINGS
+========================================= */
+
+.dashboard-card h3 {
+    font-weight: 800;
+
+    letter-spacing: -0.2px;
+}
+
+.dashboard-card-header > span {
+    background: #f8fbff;
+}

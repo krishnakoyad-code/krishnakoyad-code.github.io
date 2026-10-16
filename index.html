@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Analyst Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="welcome-page">
+
+    <!-- =========================
+         TOP NAVIGATION
+    ========================== -->
+
+    <header class="top-header">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">▮▮▮</span>
+            <span>MyPortfolio</span>
+        </a>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="nav-link active">
+                ⌂ Home
+            </a>
+
+            <a href="analytics.html" class="nav-link">
+    ◈ Explore Portfolio
+</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         WELCOME / HOME
+    ========================== -->
+
+    <main>
+
+       <section id="home" class="hero-section">
+
+    <!-- LEFT HERO CONTENT -->
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            <span></span>
+            BCA Graduate
+            <b>|</b>
+            Aspiring Data Analyst
+        </div>
+
+        <p class="hero-hello">
+            Hello, I'm
+        </p>
+
+        <h1>
+            Krishna Koyad
+        </h1>
+
+        <h2>
+            Data Analyst<span class="typing-line"></span>
+        </h2>
+
+        <p class="hero-description">
+            Turning data into meaningful insights to solve
+            real-world business problems.
+        </p>
+
+
+        <!-- TOOLS -->
+
+        <div class="hero-tools">
+
+    <div class="hero-tool">
+        <i class="fa-brands fa-python python-logo"></i>
+        Python
+    </div>
+
+    <div class="hero-tool">
+        <i class="fa-solid fa-database sql-logo"></i>
+        SQL
+    </div>
+
+    <div class="hero-tool">
+        <i class="fa-solid fa-chart-column powerbi-logo"></i>
+        Power BI
+    </div>
+
+    <div class="hero-tool">
+        <i class="fa-solid fa-file-excel excel-logo"></i>
+        Excel
+    </div>
+
+</div>
+        <!-- BUTTONS -->
+
+        <div class="hero-buttons">
+
+            <a href="analytics.html"
+               class="primary-btn">
+                Explore My Journey →
+            </a>
+
+            <a href="resume.pdf"
+               target="_blank"
+               class="secondary-btn">
+                View Resume ↗
+            </a>
+
+        </div>
+
+
+        <!-- QUICK STATS -->
+
+        <div class="hero-stats">
+
+            <div>
+                <strong>8+</strong>
+                <span>Certificates</span>
+            </div>
+
+            <div>
+                <strong>3+</strong>
+                <span>Projects</span>
+            </div>
+
+            <div>
+                <strong>3+</strong>
+                <span>Internship</span>
+            </div>
+
+            <div>
+                <strong>100%</strong>
+                <span>Learning Focus</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT ANALYTICS DASHBOARD -->
+
+    <div class="hero-dashboard">
+
+        <!-- SALES CHART -->
+
+        <div class="dashboard-card sales-card">
+
+            <div class="dashboard-card-header">
+                <h3>Sales Overview</h3>
+                <span>Last 6 Months⌄</span>
+            </div>
+
+            <div class="sales-chart">
+
+                <div class="sales-bar">
+                    <span style="height: 28%;"></span>
+                    <small>Jan</small>
+                </div>
+
+                <div class="sales-bar">
+                    <span style="height: 42%;"></span>
+                    <small>Feb</small>
+                </div>
+
+                <div class="sales-bar">
+                    <span style="height: 55%;"></span>
+                    <small>Mar</small>
+                </div>
+
+                <div class="sales-bar">
+                    <span style="height: 68%;"></span>
+                    <small>Apr</small>
+                </div>
+
+                <div class="sales-bar">
+                    <span style="height: 82%;"></span>
+                    <small>May</small>
+                </div>
+
+                <div class="sales-bar">
+                    <span style="height: 95%;"></span>
+                    <small>Jun</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CATEGORY CHART -->
+
+        <div class="dashboard-card category-card">
+
+            <h3>Category Wise Sales</h3>
+
+            <div class="category-content">
+
+                <div class="donut-chart"></div>
+
+                <div class="chart-legend">
+
+                    <p>
+                        <span class="blue-dot"></span>
+                        Electronics
+                        <b>35%</b>
+                    </p>
+
+                    <p>
+                        <span class="purple-dot"></span>
+                        Furniture
+                        <b>25%</b>
+                    </p>
+
+                    <p>
+                        <span class="orange-dot"></span>
+                        Clothing
+                        <b>18%</b>
+                    </p>
+
+                    <p>
+                        <span class="green-dot"></span>
+                        Others
+                        <b>22%</b>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SQL CARD -->
+
+        <div class="dashboard-card sql-card">
+
+            <div class="sql-header">
+
+                <div>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+
+                <span>SQL Query</span>
+
+                <button type="button">
+                    ▷ Run
+                </button>
+
+            </div>
+
+            <div class="sql-code">
+
+                <p>
+                    <span class="sql-keyword">SELECT</span>
+                </p>
+
+                <p>
+                    &nbsp;&nbsp;category,
+                </p>
+
+                <p>
+                    &nbsp;&nbsp;<span class="sql-function">SUM</span>(sales)
+                    <span class="sql-keyword">AS</span> total_sales,
+                </p>
+
+                <p>
+                    &nbsp;&nbsp;<span class="sql-function">COUNT</span>(order_id)
+                    <span class="sql-keyword">AS</span> total_orders
+                </p>
+
+                <p>
+                    <span class="sql-keyword">FROM</span> sales_data
+                </p>
+
+                <p>
+                    <span class="sql-keyword">GROUP BY</span> category
+                </p>
+
+                <p>
+                    <span class="sql-keyword">ORDER BY</span>
+                    total_sales
+                    <span class="sql-keyword">DESC</span>;
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- INSIGHTS -->
+
+        <div class="dashboard-card insights-card">
+
+            <h3>Insights</h3>
+
+            <div class="insight-item">
+
+                <strong class="positive">
+                    ↑ 18.2%
+                </strong>
+
+                <span>
+                    Sales Growth
+                </span>
+
+            </div>
+
+            <div class="insight-item">
+
+                <strong>
+                    8,432
+                </strong>
+
+                <span>
+                    Total Customers
+                </span>
+
+            </div>
+
+            <div class="insight-item">
+
+                <strong class="purple">
+                    3.4%
+                </strong>
+
+                <span>
+                    Conversion Rate
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================
+     WHAT I DO
+====================================== -->
+
+<section class="what-i-do-section">
+
+    <div class="what-intro">
+
+        <div class="what-label">
+            <span></span>
+            WHAT I DO
+        </div>
+
+        <h2>
+            From Data to
+            <span>Real Insights</span>
+        </h2>
+
+        <p>
+            I analyze data, find patterns, visualize insights
+            and create solutions that support better
+            decision-making.
+        </p>
+
+    </div>
+
+
+    <div class="what-cards">
+
+        <div class="what-card analysis-card">
+
+            <div class="what-icon">
+                ◉
+            </div>
+
+            <h3>Data Analysis</h3>
+
+            <p>
+                Clean, analyze and extract meaningful
+                insights from raw data.
+            </p>
+
+        </div>
+
+
+        <div class="what-card visualization-card">
+
+            <div class="what-icon">
+                ▥
+            </div>
+
+            <h3>Data Visualization</h3>
+
+            <p>
+                Create interactive dashboards using
+                Power BI and Excel.
+            </p>
+
+        </div>
+
+
+        <div class="what-card reporting-card">
+
+            <div class="what-icon">
+                ▤
+            </div>
+
+            <h3>Reporting & Insights</h3>
+
+            <p>
+                Build clear reports that support
+                data-driven business decisions.
+            </p>
+
+        </div>
+
+
+        <div class="what-card problem-card">
+
+            <div class="what-icon">
+                ✦
+            </div>
+
+            <h3>Problem Solving</h3>
+
+            <p>
+                Use data, logic and analytical thinking
+                to solve real-world problems.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+    </main>
+
+</body>
+
+</html>
